@@ -29,3 +29,5 @@ spring:
             - Path=/sms/**
   application:
     name: gateway-api
+server:
+  port: 8887
