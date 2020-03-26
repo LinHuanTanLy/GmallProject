@@ -1,0 +1,17 @@
+package com.itguigu.gmall.wms.dao;
+
+import com.itguigu.gmall.wms.entity.ShAreaEntity;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * 全国省市区信息
+ * 
+ * @author lixianfeng
+ * @email lxf@atguigu.com
+ * @date 2020-03-26 17:35:38
+ */
+@Mapper
+public interface ShAreaDao extends BaseMapper<ShAreaEntity> {
+	
+}

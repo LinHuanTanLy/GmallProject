@@ -1,0 +1,20 @@
+package com.itguigu.gmall.wms.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.itguigu.gmall.wms.entity.WareOrderTaskDetailEntity;
+import com.itguigu.core.bean.PageVo;
+import com.itguigu.core.bean.QueryCondition;
+
+
+/**
+ * 库存工作单
+ *
+ * @author lixianfeng
+ * @email lxf@atguigu.com
+ * @date 2020-03-26 17:35:38
+ */
+public interface WareOrderTaskDetailService extends IService<WareOrderTaskDetailEntity> {
+
+    PageVo queryPage(QueryCondition params);
+}
+

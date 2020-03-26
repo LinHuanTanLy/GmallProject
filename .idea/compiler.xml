@@ -10,8 +10,10 @@
         <module name="gamll-oms" />
         <module name="guli_gmall" />
         <module name="gmall-core" />
+        <module name="gmall-oms" />
         <module name="gmall-sms" />
         <module name="gmall-generator" />
+        <module name="gmall-gateway" />
         <module name="gmall-pms" />
         <module name="gmall-ums" />
         <module name="gmall-wms" />
@@ -23,7 +25,9 @@
       <module name="gmall" target="1.5" />
       <module name="gmall-admin" target="1.8" />
       <module name="gmall-core" target="1.5" />
+      <module name="gmall-gateway" target="1.8" />
       <module name="gmall-generator" target="1.8" />
+      <module name="gmall-oms" target="1.8" />
       <module name="gmall-pms" target="1.8" />
       <module name="gmall-sms" target="1.8" />
       <module name="gmall-ums" target="1.8" />
@@ -36,7 +40,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gamll-oms" options="-parameters" />
       <module name="gmall-admin" options="-parameters" />
+      <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
+      <module name="gmall-oms" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-sms" options="-parameters" />
       <module name="gmall-ums" options="-parameters" />

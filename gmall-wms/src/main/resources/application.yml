@@ -6,16 +6,23 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/guli_wms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
     username: root
     password: root
   redis:
-    host: 172.16.116.100
-    port: 6383
+    host: localhost
+    port: 6379
+    jedis:
+      pool:
+        max-wait: 30000
+        max-active: 100
+        max-idle: 20
+        min-idle: 0
+    timeout: 3000
+    database: 1
 mybatis-plus:
-  mapper-locations: classpath:mapper/wms/*.xml  # 读取映射文件
+  mapper-locations: classpath:mapper/wms/*.xml
   global-config:
     db-config:
-      id-type: auto  # 默认使用数据库自增
-
+      id-type: auto
