@@ -3,9 +3,29 @@ spring:
     port: 8888
   cloud:
     nacos:
-      config:
+      discovery:
         server-addr: 127.0.0.1:8848
-#    gateway:
-#      routes:
-#        - id: pms-product
-#          uri: lb://
+    gateway:
+      routes:
+        - id: pms-route # 商品管理路由
+          uri: lb://pms-server
+          predicates:
+            - Path=/pms/**
+        - id: oms-route # 订单管理路由
+          uri: lb://oms-service
+          predicates:
+            - Path=/oms/**
+        - id: ums-route # 用户管理路由
+          uri: lb://ums-service
+          predicates:
+            - Path=/ums/**
+        - id: wms-route # 仓库管理路由
+          uri: lb://wms-service
+          predicates:
+            - Path=/wms/**
+        - id: sms-route # 营销管理路由
+          uri: lb://sms-service
+          predicates:
+            - Path=/sms/**
+  application:
+    name: gateway-api
